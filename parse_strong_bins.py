@@ -93,12 +93,12 @@ import os
 import glob
 import argparse
 argParser=argparse.ArgumentParser()
-argParser.add_argument('-in','--input_dir', help='Directory of results from STRONG')
-argParser.add_argument('-out','--output_dir', help='Directory to write BLAST results')
+argParser.add_argument('-in','--input_dir', required=True, help='Directory of results from STRONG')
+argParser.add_argument('-out','--output_dir', required=True, help='Directory to write BLAST results')
 args=argParser.parse_args()
 
-input_folder=args.input_dir   #='/Users/putonti/Research/MyPapers/LAUD_Strong/results/'
-output_folder=args.output_dir #='/Users/putonti/Research/MyPapers/LAUD_Strong/blast_results/'
+input_folder=args.input_dir
+output_folder=args.output_dir
 
 
 files=glob.glob(input_folder+'Bin*[0-9]/haplotypes_cogs.fna', recursive=True)
