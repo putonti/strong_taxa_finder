@@ -5,9 +5,6 @@ def qblast(files):
     # Import Biopython tools for running remote BLAST searches
     from Bio.Blast import NCBIWWW
 
-    # # Import Biopython SeqIO module to handle reading sequence data
-    # from Bio import SeqIO
-
     # BLAST generates output in XML format and we need to somehow parse it!
     from Bio.Blast import NCBIXML
 
